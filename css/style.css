@@ -20,8 +20,11 @@ body {
   box-sizing: border-box;
 }
 
-/* HEADER not watch chadddddnges
-*/
+/* HEADER CHLEN */
+p {
+  color: #fff;
+}
+
 .header {
   position: relative;
   height: 95vh;
@@ -55,7 +58,7 @@ body {
 }
 
 .heading-primary {
-  color: white;
+  color: #fff;
   text-transform: uppercase;
   margin-bottom: 6rem;
   /* remove shake after end of animation */
