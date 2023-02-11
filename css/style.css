@@ -507,12 +507,37 @@ body {
   shape-outside: circle(50% at 50% 50%);
   clip-path: circle(50% at 50% 50%);
   transform: translateX(-3rem) skewX(12deg);
+  position: relative;
 }
 .story__img {
   height: 100%;
+  transform: translate(-4rem) scale(1.4);
+  backface-visibility: hidden;
+  transition: all 0.5s;
 }
 .story__text {
   transform: skewX(12deg);
+}
+.story__caption {
+  transition: all 0.5s;
+  text-transform: uppercase;
+  position: absolute;
+  color: #fff;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, 20%);
+  font-size: 1.7rem;
+  text-align: center;
+  opacity: 0%;
+  backface-visibility: hidden;
+}
+.story:hover .story__caption {
+  transform: translate(-50%, -50%);
+  opacity: 1;
+}
+.story:hover .story__img {
+  transform: translate(-4rem) scale(1);
+  filter: blur(0.4rem) brightness(0.8);
 }
 
 /*# sourceMappingURL=style.css.map */
