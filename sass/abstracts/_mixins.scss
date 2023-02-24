@@ -12,3 +12,46 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+// MEDIA QUERY MANGER
+/*
+0 - 600 px: phone
+600 - 900 px: tablet portrait
+900 - 1200 px: tablet landscape
+[1200 - 1800] normal styles
+1800 -  px: big screen
+
+$breakepint argument choises:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+
+use em`s because rem didnt work in media querires
+1 em = 16px (default browser settings)
+
+ORDER: Base + typography > general layout + grid > page layout > components
+*/
+
+@mixin respond($brakepoint) {
+  @if $brakepoint == phone {
+    @media (max-width: 37.5em) {
+      @content; // 600 px
+    }
+  }
+  @if $brakepoint == tab-port {
+    @media (max-width: 56.25em) {
+      @content; // 900 px
+    }
+  }
+  @if $brakepoint == tab-land {
+    @media (max-width: 75em) {
+      @content; // 1200 px
+    }
+  }
+  @if $brakepoint == big-desktop {
+    @media (min-width: 112.5em) {
+      @content; // 1800 px
+    }
+  }
+}
