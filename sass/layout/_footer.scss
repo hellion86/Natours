@@ -10,17 +10,18 @@
   &__logo-box {
     text-align: center;
     margin-bottom: 8rem;
+    @include respond(tab-port) {
+      margin-bottom: 6rem;
+    }
   }
 
   &__logo {
     width: 15rem;
     height: auto;
+
     @include respond(tab-port) {
       width: 12rem;
     }
-    // @include respond(phone) {
-    //   width: 10rem;
-    // }
   }
 
   &__navigation {
