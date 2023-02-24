@@ -49,6 +49,11 @@
     column-gap: 4rem;
     column-rule: 1px solid $color-grey-dark-2;
 
+    @include respond(phone) {
+      column-count: 1;
+      column-gap: 0;
+    }
+
     -moz-column-count: 2;
     -moz-column-gap: 4rem;
     -moz-column-rule: 1px solid $color-grey-dark-2;
