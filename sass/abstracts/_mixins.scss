@@ -32,25 +32,26 @@ use em`s because rem didnt work in media querires
 
 ORDER: Base + typography > general layout + grid > page layout > components
 */
-
+// dont apply when print the page
+// only screen and
 @mixin respond($brakepoint) {
   @if $brakepoint == phone {
-    @media (max-width: 37.5em) {
+    @media only screen and (max-width: 37.5em) {
       @content; // 600 px
     }
   }
   @if $brakepoint == tab-port {
-    @media (max-width: 56.25em) {
+    @media only screen and (max-width: 56.25em) {
       @content; // 900 px
     }
   }
   @if $brakepoint == tab-land {
-    @media (max-width: 75em) {
+    @media only screen and (max-width: 75em) {
       @content; // 1200 px
     }
   }
   @if $brakepoint == big-desktop {
-    @media (min-width: 112.5em) {
+    @media only screen and (min-width: 112.5em) {
       @content; // 1800 px
     }
   }
